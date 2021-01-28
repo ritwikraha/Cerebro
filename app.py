@@ -107,6 +107,7 @@ def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
     y = lfilter(b, a, data)
     return y
 #function to load the raw data from the edf file selected
+@st.cache
 def load_raw_data(session_name):
   file_loc = 'data/S001/S001'+ session_name+'.edf'
   signals, signal_headers, header = highlevel.read_edf(file_loc)
@@ -175,7 +176,8 @@ def main():
     st.write("The data of channel ",selected_channel," in the band -  ",selected_frequency)
     st.line_chart(sampled_channel)
   st.markdown('The data for this project has been used from - [EEG dataset of Fusion relaxation and concentration moods”, Mendeley Data, V1, doi: 10.17632/8c26dn6c7w.1](https://data.mendeley.com/datasets/8c26dn6c7w/1#__sid=js0)')
-
+  st.markdown('App created by - [ritwikraha](https://ritwikraha.github.io/Ritwik-Raha/)')
+  st.markdown('Github Repository - [cerebro](https://github.com/ritwikraha/Cerebro)')
 
 
 if __name__ == '__main__':
