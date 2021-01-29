@@ -14,18 +14,21 @@ The driving idea behind Cerebro is to easily visualise and plot brain activity f
 
 * Clone the repository.
 * Download and install the necessary packages from `requirement.txt`.
-* Change the data files in the folder named `data`, only supports `.edf` files for now.
+* Change the data files in the folder named `data`(only supports `.edf` files for now).
 * Run `app.py`.
 
-Or you can simply open the web app at [cerebrp-visualiser](https://cerebro-visualiser.herokuapp.com/) and enjoy the plots. If you want to tinker around without installing streamlit on your local computer, you can use the notebooks with google colab.
+Or you can simply open the web app at [cerebro-visualiser](https://cerebro-visualiser.herokuapp.com/) and enjoy the plots. 
+
+
+If you want to tinker around without installing streamlit on your local computer, you can use the notebooks with google colab.
 
 ## Upcoming Updates
 
-[] Provide support for data from other EEG headset.
-[] Provide support for other formats of EEG Data.
-[] Plot features like PSD and DE from selected channel
-[x] Select a channel and frequency band to visualise the plot
-[x] Show a topographical map from the EEG data 
+- [ ] Provide support for data from other EEG headset.
+- [ ] Provide support for other formats of EEG Data.
+- [ ] Plot features like PSD and DE from selected channel
+- [x] Select a channel and frequency band to visualise the plot
+- [x] Show a topographical map from the EEG data 
 
 - - - - 
 
