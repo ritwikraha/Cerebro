@@ -10,6 +10,7 @@ import streamlit as st
 
 # a function to fetch the power spectral density of the signals
 # change the sampling frequency (fs) and range on the basis of headset
+@st.cache
 def get_psds(data, fs=256, f_range=[0.5, 30]):
     '''
     Calculate signal power using Welch method.
@@ -27,6 +28,7 @@ def get_psds(data, fs=256, f_range=[0.5, 30]):
         psds.append(psd[idx])
     return powers, psds
 # function to plot the topographical map of the brain according to Emotiv 14 channel headset
+@st.cache
 def plot_topomap(data, ax, fig, draw_cbar=True):
     '''
     Plot topographic plot of EEG data. This specialy design for Emotiv 14 electrode data. 
